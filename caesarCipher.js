@@ -1,6 +1,6 @@
-function caesarShift( str, key ) {
+const caesarCipher = ( str, key ) => {
    if ( key < 0 ) {
-      return caesarShift( str, key + 26 )
+      return caesarCipher( str, key + 26 )
    }
 
    let output = ""
@@ -27,10 +27,14 @@ function caesarShift( str, key ) {
 }
 
 console.log( "Encript: " )
-caesarShift( 'Attack at dawn!', 12 )
+caesarCipher( 'ALEA JACTA EST', 3 )
 console.log( "Decript: " )
-caesarShift( 'Mffmow mf pmiz!', -12 )
+caesarCipher( 'DOHD MDFWD HVW', -3 )
 console.log( "Encript: " )
-caesarShift( 'STRUK', 8 )
+caesarCipher( 'STRUK', 8 )
 console.log( "Decript: " )
-caesarShift( 'ABZCS', -8 )
+caesarCipher( 'ABZCS', -8 )
+console.log( "Encript: " )
+caesarCipher( 'Attack at dawn!', 12 )
+console.log( "Decript: " )
+caesarCipher( 'Mffmow mf pmiz!', -12 )
